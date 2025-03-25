@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shape/components/bottom_nevbar.dart';
-import 'package:shape/screens/my_home_page.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

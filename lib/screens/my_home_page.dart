@@ -237,60 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
 
-          // New sections
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(24.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(16),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
-                    spreadRadius: 1,
-                    blurRadius: 3,
-                    offset: const Offset(0, 1),
-                  ),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Explore, understand, evolve',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF333333),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  const Text(
-                    'Trackers and tools to stay on top of your health',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF666666),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.purple.shade300,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    ),
-                    child: const Text('Take Assessment'),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          
 
           // Ambient Sound section
           Padding(
@@ -311,9 +258,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      _buildSoundCard('https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png', 'Rain and thunder'),
-                      _buildSoundCard('https://media.istockphoto.com/id/1263562386/photo/beautifully-structured-thunderstorm-in-bulgarian-plains.jpg?s=2048x2048&w=is&k=20&c=8f1DP1SZYqZctjMD7RDFjraDQk7k-HWZl8pION1mWJo=', 'Birds waking up'),
-                      _buildSoundCard('https://www.metroparks.net/wp-content/uploads/2017/06/1080p_HBK_autumn-morning_GI.jpg', 'Forest sounds'),
+                      _buildSoundCard('assets/images/rain.jpg', 'Rain and thunder'),
+                      _buildSoundCard('assets/images/bird.webp', 'Birds waking up'),
+                      _buildSoundCard('assets/images/forest.jpg', 'Forest sounds'),
                     ],
                   ),
                 ),
@@ -340,9 +287,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      _buildRecommendationCard('https://media.assettype.com/TNIE%2Fimport%2F2022%2F7%2F24%2Foriginal%2FEMBRACING.jpg', 'Parenting Ethos'),
-                      _buildRecommendationCard('https://scitechdaily.com/images/Range-of-Emotions-Concept-777x518.jpg', 'Decoding Emotions'),
-                      _buildRecommendationCard('https://img.jagranjosh.com/images/2024/November/30112024/Essay-on-the-Importance-of-Internet-Safety.webp', 'Digital Safety First'),
+                      _buildRecommendationCard('assets/images/family.avif', 'Parenting Ethos'),
+                      _buildRecommendationCard('assets/images/Emotions.webp', 'Decoding Emotions'),
+                      _buildRecommendationCard('assets/images/Safety.webp', 'Digital Safety First'),
                     ],
                   ),
                 ),
@@ -379,7 +326,7 @@ class _MyHomePageState extends State<MyHomePage> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
-          image: NetworkImage(imagePath),
+          image: AssetImage(imagePath),
           fit: BoxFit.cover,
         ),
       ),
@@ -419,7 +366,7 @@ class _MyHomePageState extends State<MyHomePage> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
-          image: NetworkImage(imagePath),
+          image: AssetImage(imagePath),
           fit: BoxFit.cover,
         ),
       ),
